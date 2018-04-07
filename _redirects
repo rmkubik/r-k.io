@@ -1,3 +1,4 @@
 # Redirects from what the browser requests to what we serve
 /             http://www.ryankubik.com
 /twitter      https://twitter.com/ryrykubes
+/phaser       /phaser.html
