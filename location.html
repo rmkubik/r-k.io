@@ -3,9 +3,11 @@
 <script>
 function getLocation() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(coords) {
-            document.querySelector("#longitude").value = coords.longitude;
-            document.querySelector("#latitude").value = coords.latitude;
+        navigator.geolocation.getCurrentPosition(function(position) {
+            document.querySelector("#longitude").value =
+                position.coords.longitude;
+            document.querySelector("#latitude").value =
+                position.coords.latitude;
         });
     } else {
         document.querySelector("#errorMessage").style.display = "block";
@@ -15,7 +17,7 @@ function getLocation() {
 </head>
 <body>
     <div>
-        <button onclick="getLocation">Get My Location</button>
+        <button onclick="getLocation()">Get My Location</button>
         <label>Longitude: </label>
         <input id="longitude" type="text" readonly/>
         <label>Latitude: </label>
