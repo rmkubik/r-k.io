@@ -1,0 +1,26 @@
+<html>
+<head>
+<script>
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(coords) {
+            document.querySelector("#longitude").value = coords.longitude;
+            document.querySelector("#latitude").value = coords.latitude;
+        });
+    } else {
+        document.querySelector("#errorMessage").style.display = "block";
+    }
+}
+</script>
+</head>
+<body>
+    <div>
+        <button onclick="getLocation">Get My Location</button>
+        <label>Longitude: </label>
+        <input id="longitude" type="text" readonly/>
+        <label>Latitude: </label>
+        <input id="latitude" type="text" readonly/>
+        <p id="errorMessage" style="display: none;">This browser doesn't support Geolocation</p>
+    </div>
+</body>
+</html>
