@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'PokemonSolid';
+    src: url('pokemon_solid-webfont.eot');
+    src: url('pokemon_solid-webfont.eot?#iefix') format('embedded-opentype'),
+         url('pokemon_solid-webfont.woff2') format('woff2'),
+         url('pokemon_solid-webfont.woff') format('woff'),
+         url('pokemon_solid-webfont.ttf') format('truetype'),
+         url('pokemon_solid-webfont.svg#pokemon_solidnormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PokemonHollow';
+    src: url('pokemon_hollow-webfont.eot');
+    src: url('pokemon_hollow-webfont.eot?#iefix') format('embedded-opentype'),
+         url('pokemon_hollow-webfont.woff2') format('woff2'),
+         url('pokemon_hollow-webfont.woff') format('woff'),
+         url('pokemon_hollow-webfont.ttf') format('truetype'),
+         url('pokemon_hollow-webfont.svg#pokemon_hollownormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
