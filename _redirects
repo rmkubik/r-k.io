@@ -1,10 +1,11 @@
 # Redirects from what the browser requests to what we serve
-/                 http://www.ryankubik.com
-/twitter          https://twitter.com/ryrykubes
-/phaser           /phaser.html
-/flappy           https://donut.netlify.com/
-/location         /location.html
-/mail             /mail.html
-/wildfire         /wildfire.html
-/phaser-workshop  /phaser-workshop.html
-/wildfire/key-art /assets/images/wildfire/wildire-worldmap-idle.2019-03-18 19_01_46.gif
+/                         http://www.ryankubik.com
+/twitter                  https://twitter.com/ryrykubes
+/phaser                   /phaser.html
+/flappy                   https://donut.netlify.com/
+/location                 /location.html
+/mail                     /mail.html
+/wildfire                 /wildfire.html
+/phaser-workshop          /phaser-workshop.html
+/wildfire/key-art         /assets/images/wildfire/wildire-worldmap-idle.2019-03-18 19_01_46.gif
+/wildfire/additional-gif  /assets/images/wildfire/wildfire-leftarrow-clouds.2019-03-19 17_20_52.gif
