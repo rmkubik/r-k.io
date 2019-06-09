@@ -1,13 +1,14 @@
 # Redirects from what the browser requests to what we serve
-/                         http://www.ryankubik.com
-/twitter                  https://twitter.com/ryrykubes
-/phaser                   /phaser.html
-/flappy                   https://donut.netlify.com/
-/location                 /location.html
-/mail                     https://buttondown.email/rmkubik
-/phaser-workshop          /phaser-workshop.html
-/wildfire                 https://wildfire.fun
-/wildfire/key-art         /assets/images/wildfire/wildire-worldmap-idle.2019-03-18%2019_01_46.gif
-/wildfire/additional-gif  /assets/images/wildfire/wildfire-leftarrow-clouds.2019-03-19%2017_20_52.gif
-/wildfire/gameplay        /assets/video/wildfire/wildfire-playthrough-world1.mp4
-/share-as-you-learn       /share-as-you-learn.html
+/                                 http://www.ryankubik.com
+/twitter                          https://twitter.com/ryrykubes
+/phaser                           /phaser.html
+/flappy                           https://donut.netlify.com/
+/location                         /location.html
+/mail                             https://buttondown.email/rmkubik
+/phaser-workshop                  /phaser-workshop.html
+/wildfire                         https://wildfire.fun
+/wildfire/key-art                 /assets/images/wildfire/wildire-worldmap-idle.2019-03-18%2019_01_46.gif
+/wildfire/additional-gif          /assets/images/wildfire/wildfire-leftarrow-clouds.2019-03-19%2017_20_52.gif
+/wildfire/gameplay                /assets/video/wildfire/wildfire-playthrough-world1.mp4
+/wildfire/wildfire/alpha-trailer  https://vimeo.com/341163382
+/share-as-you-learn               /share-as-you-learn.html
