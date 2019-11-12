@@ -1,9 +1,14 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="./css/sutro-theme.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/luminous-lightbox@2.3.2/dist/luminous-basic.min.css"
+    />
     <style>
       main {
-        max-width: 650px;
+        max-width: 900px;
         margin: 0 auto;
         padding: 15px;
       }
@@ -32,11 +37,67 @@
       .center {
         text-align: center;
       }
+      .card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        list-style: none;
+      }
+      .card {
+      }
+      .lum-lightbox-caption {
+        background-color: #333333;
+        padding: 20px;
+      }
+      .lum-lightbox-caption a {
+        color: white;
+        text-decoration: underline;
+      }
+      .lum-lightbox-caption a:hover {
+        color: rgb(44, 102, 202);
+      }
+      .external-link-arrow {
+        font-weight: bold;
+        border: 2px solid white;
+      }
     </style>
+    <script>
+      function onCaptionClick(event) {
+        // prevent caption link clicks from closing modal and preventing link follows
+        event.stopPropagation();
+
+        return true;
+      }
+
+      function createLightboxes() {
+        new LuminousGallery(
+          document.querySelectorAll(".card > a"),
+          {},
+          {
+            sourceAttribute: "data-full-img",
+            caption: function(trigger) {
+              return `<a onclick="onCaptionClick(event)" href="${
+                trigger.href
+              }">${trigger
+                .querySelector("img")
+                .getAttribute(
+                  "alt"
+                )}</a> <span class="external-link-arrow">${"\u2197"}</span>`;
+            }
+          }
+        );
+      }
+    </script>
     <script
       async
       src="https://platform.twitter.com/widgets.js"
       charset="utf-8"
+    ></script>
+    <script
+      async
+      src="https://unpkg.com/luminous-lightbox@2.3.2/dist/luminous.min.js"
+      charset="utf-8"
+      onload="createLightboxes()"
     ></script>
   </head>
   <body>
@@ -115,6 +176,53 @@
           >Register your project!</a
         >
       </p>
+
+      <div>
+        <h3 id="submiitted-projects">Submitted Projects</h3>
+        <ul class="card-container">
+          <li class="card">
+            <a
+              href="https://ayolland.itch.io/cavern-caravan-trail"
+              data-full-img="https://i.imgur.com/CnXHEwL.jpg"
+            >
+              <img
+                alt="Cavern Caravan Trail DX"
+                src="https://i.imgur.com/CnXHEwL.jpg"
+              />
+            </a>
+            <p>Cavern Caravan Trail DX</p>
+          </li>
+
+          <li class="card">
+            <a data-full-img="https://i.imgur.com/dzjUpcL.png">
+              <img
+                alt="Next Level Banana: Secret Project"
+                src="https://i.imgur.com/dzjUpcL.png"
+              />
+            </a>
+            <p>Next Level Banana: Secret Project</p>
+          </li>
+
+          <li class="card">
+            <a
+              data-full-img="https://img.itch.zone/aW1hZ2UvNDczMDEzLzI2NzQ3OTAucG5n/original/5MlTIz.png"
+            >
+              <img
+                alt="Heartburn Boulevard"
+                src="https://img.itch.zone/aW1hZ2UvNDczMDEzLzI2NzQ3OTAucG5n/original/5MlTIz.png"
+              />
+            </a>
+            <p>Heartburn Boulevard</p>
+          </li>
+
+          <li class="card">
+            <a data-full-img="https://i.imgur.com/08P0Tpw.jpg">
+              <img alt="Ocular" src="https://i.imgur.com/08P0Tpw.jpg" />
+            </a>
+            <p>Ocular</p>
+          </li>
+        </ul>
+      </div>
 
       <hr />
 
