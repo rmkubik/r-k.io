@@ -84,7 +84,24 @@
 
       function createLightboxes() {
         new LuminousGallery(
-          document.querySelectorAll(".card > a"),
+          document.querySelectorAll("#projects-section-120519 .card > a"),
+          {},
+          {
+            sourceAttribute: "data-full-img",
+            caption: function(trigger) {
+              return `<a onclick="onCaptionClick(event)" href="${
+                trigger.href
+              }">${trigger
+                .querySelector("img")
+                .getAttribute(
+                  "alt"
+                )}</a> <span class="external-link-arrow">${"\u2197"}</span>`;
+            }
+          }
+        );
+
+        new LuminousGallery(
+          document.querySelectorAll("#projects-section-111519 .card > a"),
           {},
           {
             sourceAttribute: "data-full-img",
@@ -187,8 +204,8 @@
         >
       </p>
 
-      <div>
-        <h4 id="projects-111519">Submitted Projects</h4>
+      <div id="projects-section-120519">
+        <h4 id="projects-120519">Submitted Projects</h4>
         <ul class="card-container">
           <li class="card">
             <a
@@ -196,11 +213,11 @@
               data-full-img="https://wildfire.fun/static/wildire-worldmap-idle.2019-10-03 21_33_13-02b31c0201676542698a03eab6a11729.gif"
             >
               <img
-                alt="Wildfire Swap"
+                alt="Wildfire Swap by Ryan Kubik"
                 src="https://wildfire.fun/static/wildire-worldmap-idle.2019-10-03 21_33_13-02b31c0201676542698a03eab6a11729.gif"
               />
             </a>
-            <p>Wildfire Swap</p>
+            <p>Wildfire Swap by Ryan Kubik</p>
           </li>
         </ul>
       </div>
@@ -223,7 +240,7 @@
       </p>
       <p>November 15th, 6pm - 9pm</p>
 
-      <div>
+      <div id="projects-section-111519">
         <h4 id="projects-111519">Projects</h4>
         <ul class="card-container">
           <li class="card">
