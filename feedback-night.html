@@ -89,6 +89,23 @@
 
       function createLightboxes() {
         new LuminousGallery(
+          document.querySelectorAll("#projects-section-021120 .card > a"),
+          {},
+          {
+            sourceAttribute: "data-full-img",
+            caption: function(trigger) {
+              return `<a onclick="onCaptionClick(event)" href="${
+                trigger.href
+              }">${trigger
+                .querySelector("img")
+                .getAttribute(
+                  "alt"
+                )}</a> <span class="external-link-arrow">${"\u2197"}</span>`;
+            }
+          }
+        );
+
+        new LuminousGallery(
           document.querySelectorAll("#projects-section-010920 .card > a"),
           {},
           {
@@ -200,6 +217,53 @@
 
       <h2 id="next-event">Next Event</h2>
 
+      <h3>Feedback Night, Feb. 11th</h3>
+      <p>
+        We're going to be taking over the upstairs of the
+        <a
+          href="https://www.google.com/maps/place/East+Side+Deli+on+Madison/@45.5132879,-122.6566875,17z/data=!3m1!4b1!4m5!3m4!1s0x5495a09f8e5a3145:0xe322e7b6eb156c7e!8m2!3d45.5132879!4d-122.6544988"
+          >East Side Delicatessan on Madison</a
+        >
+        at the next
+        <a href="https://pigsquad.com/events-list/2020/2/11/pigsquad-social-feedback-night"
+          >PIGSquad Feedback Night</a
+        >!
+      </p>
+      <p>February 11th, 6pm - 9pm</p>
+
+      <p>
+        If you are showing a project, please fill out this form so we can find
+        you and your project after the event!
+      </p>
+
+      <p class="center">
+        <a class="button" href="https://forms.gle/WFU5NE8vn5JP7MVY9"
+          >Register your project!</a
+        >
+      </p>
+
+      <div id="projects-section-021120">
+        <h4 id="projects-021120">Submitted Projects</h4>
+        <ul class="card-container">
+          <li class="card">
+            <a
+              href="https://wildfire.fun"
+              data-full-img="https://wildfire.fun/static/wildire-worldmap-idle.2019-10-03 21_33_13-02b31c0201676542698a03eab6a11729.gif"
+            >
+              <img
+                alt="Wildfire Swap by Ryan Kubik"
+                src="https://wildfire.fun/static/wildire-worldmap-idle.2019-10-03 21_33_13-02b31c0201676542698a03eab6a11729.gif"
+              />
+            </a>
+            <p>Wildfire Swap by Ryan Kubik</p>
+          </li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <h2 id="past-events">Past Events</h2>
+
       <h3>Feedback Night, Jan. 9th</h3>
       <p>
         We're going to be taking over the upstairs of the
@@ -214,19 +278,8 @@
       </p>
       <p>January 9th, 6pm - 9pm</p>
 
-      <p>
-        If you are showing a project, please fill out this form so we can find
-        you and your project after the event!
-      </p>
-
-      <p class="center">
-        <a class="button" href="https://forms.gle/WFU5NE8vn5JP7MVY9"
-          >Register your project!</a
-        >
-      </p>
-
       <div id="projects-section-010920">
-        <h4 id="projects-010920">Submitted Projects</h4>
+        <h4 id="projects-010920">Projects</h4>
         <ul class="card-container">
           <li class="card">
             <a
@@ -283,8 +336,6 @@
       </div>
 
       <hr />
-
-      <h2 id="past-events">Past Events</h2>
 
       <h3>Feedback Night, Dec. 5th</h3>
       <p>
