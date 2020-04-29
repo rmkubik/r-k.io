@@ -3,9 +3,9 @@
     <!-- <link rel="stylesheet" type="text/css" href="./css/sutro-theme.css" /> -->
     <style>
       main {
-        {# max-width: 650px;
-        margin: 0 auto;
-        padding: 15px; #}
+        display: flex;
+        flex-direction: column;
+        height: 100%;
       }
       section {
         max-width: 650px;
@@ -17,6 +17,12 @@
         text-shadow: 3px 3px #20283D;
         font-family: "Rockwell";
         margin: 0;
+      }
+      .email {
+        margin-top: 40px;
+        margin-bottom: 20px;
+
+        height: fit-content;
       }
       input {
         background-color: #E5B083;
@@ -32,15 +38,18 @@
 
         min-width: 300px;
         margin-right: 24px;
-        margin-top: 40px;
-        margin-bottom: 20px;
+
+        height: 100%;
       }
       button {
         background-color: #E5B083;
         color: #20283D;
 
-        border: 2px solid #FBF7F3;
+        border: none;
         box-shadow: 3px 3px #20283D;
+        
+        font-family: "Rockwell";
+        font-size: 1.2em;
 
         padding-left: 8px;
         padding-right: 8px;
@@ -54,9 +63,20 @@
         margin-top: 64px;
         text-align: center;
         margin-bottom: 80px;
+
+        flex-grow: 1;
       }
       #sign-up h1 {
-        font-size: 2em;
+        font-size: 3em;
+      }
+      #sign-up p {
+        font-size: 1.2rem;
+
+        width: 70%;
+
+        margin-top: 80px;
+        margin-left: auto;
+        margin-right: auto;
       }
       #treeline {
         width: 100%;
@@ -84,18 +104,16 @@
         margin-top: 32px;
         margin-bottom: 32px;
       }
+      #add-game-container button {
+        background-color: #426E5D;
+        color: #FBF7F3;
+
+        margin-left: 40px;
+      }
       #by-line {
         margin-top: 128px !important;
         text-align: right;
       }
-      {# html:after {
-        content: '';
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        bottom: -100vh;
-        background-color: tomato;
-      } #}
     </style>
     <script
       async
@@ -108,7 +126,9 @@
       <!-- <header></header> -->
       <section id="sign-up">
         <h1>PDX Games Mailing List</h1>
-        <input value="" type="text" /><button>Join</button>
+        <div class="email">
+          <input value="" type="text" /><button>Join</button>
+        </div>
         <p>
             Get monthly updates on the games PDX developers are working on.
         </p>
@@ -120,9 +140,9 @@
             <p>
                 Apply to add your project to our mailing list.
             </p>
-            <button>Join</button>
+            <button>Apply</button>
             <p>
-                We only send a few highlights out each month so cannot guarantee your project makes it into a specific month. We'll try to favor projects and developers that haven't been mentioned yet in order of application.
+                We only send a few highlighted games out each month so cannot guarantee your project makes it into a specific month. We'll try to favor projects and developers that haven't been mentioned yet in order of application.
             </p>
             <p id="by-line">
                 by Ryan Kubik
