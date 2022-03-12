@@ -41,8 +41,9 @@
         <li>
           An object was missing from the Journal on accident. The
           <span
+            class="spoiler"
             x-data="{open: false}"
-            x-bind:class="! open ? 'spoiler' : ''"
+            x-bind:class="{ spoiler: !open }"
             x-on:click="open = !open"
             ><span>"rocky seed"</span></span
           >
@@ -51,21 +52,24 @@
         <li>
           The object
           <span
+            class="spoiler"
             x-data="{open: false}"
-            x-bind:class="! open ? 'spoiler' : ''"
+            x-bind:class="!open ? 'spoiler' : ''"
             x-on:click="open = !open"
             ><span>"lighthouse"</span></span
           >
           had its functionality changed slightly. It used to
           <span
+            class="spoiler"
             x-data="{open: false}"
-            x-bind:class="! open ? 'spoiler' : ''"
+            x-bind:class="!open ? 'spoiler' : ''"
             x-on:click="open = !open"
             ><span>provide 2 ships every time it was placed</span></span
           >. It now provides
           <span
+            class="spoiler"
             x-data="{open: false}"
-            x-bind:class="! open ? 'spoiler' : ''"
+            x-bind:class="!open ? 'spoiler' : ''"
             x-on:click="open = !open"
             ><span>one ship per adjacent ocean tile</span></span
           >.
@@ -73,15 +77,17 @@
         <li>
           The object
           <span
+            class="spoiler"
             x-data="{open: false}"
-            x-bind:class="! open ? 'spoiler' : ''"
+            x-bind:class="!open ? 'spoiler' : ''"
             x-on:click="open = !open"
             ><span>"quarry"</span></span
           >
           had its functionality changed slightly. It used to
           <span
+            class="spoiler"
             x-data="{open: false}"
-            x-bind:class="! open ? 'spoiler' : ''"
+            x-bind:class="!open ? 'spoiler' : ''"
             x-on:click="open = !open"
             ><span
               >randomly give an object from a set of options with even
@@ -89,14 +95,16 @@
             ></span
           >. They were
           <span
+            class="spoiler"
             x-data="{open: false}"
-            x-bind:class="! open ? 'spoiler' : ''"
+            x-bind:class="!open ? 'spoiler' : ''"
             x-on:click="open = !open"
             ><span>Rocky Seed, Mine, and Dungeon</span></span
           >. It will now
           <span
+            class="spoiler"
             x-data="{open: false}"
-            x-bind:class="! open ? 'spoiler' : ''"
+            x-bind:class="!open ? 'spoiler' : ''"
             x-on:click="open = !open"
             ><span
               >provide the same items. But, new rules effect the distribution
@@ -104,8 +112,9 @@
             ></span
           >.
           <span
+            class="spoiler"
             x-data="{open: false}"
-            x-bind:class="! open ? 'spoiler' : ''"
+            x-bind:class="!open ? 'spoiler' : ''"
             x-on:click="open = !open"
             ><span
               >Each adjacent mountain is a chance for a "Rocky Seed". Each
