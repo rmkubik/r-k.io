@@ -1,0 +1,119 @@
+<html>
+  <head>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script></script>
+    <style>
+      .spoiler {
+        background-color: black;
+        cursor: pointer;
+      }
+
+      .spoiler span {
+        visibility: hidden;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./css/sutro-theme.css" />
+    <style>
+      main {
+        max-width: 650px;
+        margin: 0 auto;
+        padding: 15px;
+      }
+      .twitter-tweet {
+        margin: 0 auto;
+        padding-bottom: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Island Maker Patch Notes</h1>
+      <a href="https://rmkubik.itch.io/island-maker">Play the game!</a>
+      <br />
+      <br />
+      <p>
+        I have listed patch notes on this site because they contain spoilers.
+        Itch.io devlogs don't seem to have a spoiler option. If you don't wish
+        to see spoilers, do not expand the sections below!
+      </p>
+      <h2>Version 7 - 3/12/22</h2>
+      <ul>
+        <li>
+          An object was missing from the Journal on accident. The
+          <span
+            x-data="{open: false}"
+            x-bind:class="! open ? 'spoiler' : ''"
+            x-on:click="open = !open"
+            ><span>"rocky seed"</span></span
+          >
+          object was added to the journal.
+        </li>
+        <li>
+          The object
+          <span
+            x-data="{open: false}"
+            x-bind:class="! open ? 'spoiler' : ''"
+            x-on:click="open = !open"
+            ><span>"lighthouse"</span></span
+          >
+          had its functionality changed slightly. It used to
+          <span
+            x-data="{open: false}"
+            x-bind:class="! open ? 'spoiler' : ''"
+            x-on:click="open = !open"
+            ><span>provide 2 ships every time it was placed</span></span
+          >. It now provides
+          <span
+            x-data="{open: false}"
+            x-bind:class="! open ? 'spoiler' : ''"
+            x-on:click="open = !open"
+            ><span>one ship per adjacent ocean tile</span></span
+          >.
+        </li>
+        <li>
+          The object
+          <span
+            x-data="{open: false}"
+            x-bind:class="! open ? 'spoiler' : ''"
+            x-on:click="open = !open"
+            ><span>"quarry"</span></span
+          >
+          had its functionality changed slightly. It used to
+          <span
+            x-data="{open: false}"
+            x-bind:class="! open ? 'spoiler' : ''"
+            x-on:click="open = !open"
+            ><span
+              >randomly give an object from a set of options with even
+              distribution</span
+            ></span
+          >. They were
+          <span
+            x-data="{open: false}"
+            x-bind:class="! open ? 'spoiler' : ''"
+            x-on:click="open = !open"
+            ><span>Rocky Seed, Mine, and Dungeon</span></span
+          >. It will now
+          <span
+            x-data="{open: false}"
+            x-bind:class="! open ? 'spoiler' : ''"
+            x-on:click="open = !open"
+            ><span
+              >provide the same items. But, new rules effect the distribution
+              chances conditionally</span
+            ></span
+          >.
+          <span
+            x-data="{open: false}"
+            x-bind:class="! open ? 'spoiler' : ''"
+            x-on:click="open = !open"
+            ><span
+              >Each adjacent mountain is a chance for a "Rocky Seed". Each
+              adjacent mine is a chance for a "Mine" or "Dungeon"</span
+            ></span
+          >.
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>
