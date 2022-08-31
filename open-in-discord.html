@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <style>
+      .row {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .col {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .container > * {
+        margin-bottom: 1rem;
+      }
+
+      input {
+        width: 60vw;
+        margin-right: 1rem;
+      }
+
+      button {
+        cursor: pointer;
+        padding: 1rem 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Discord Link Convertor</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <label for="discord-https-link">Discord HTTPS Link</label>
+          <input id="discord-https-link" />
+        </div>
+        <button id="copy-https">Copy</button>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="discord-app-link">Discord App Link</label>
+          <input id="discord-app-link" />
+        </div>
+        <button id="copy-discord">Copy</button>
+      </div>
+      <button id="open-button">Open Discord App</button>
+    </div>
+    <script>
+      const httpsLinkInput = document.getElementById("discord-https-link");
+      const discordAppInput = document.getElementById("discord-app-link");
+      const openButton = document.getElementById("open-button");
+      const copyHttpsButton = document.getElementById("copy-https");
+      const copyDiscordButton = document.getElementById("copy-discord");
+
+      function setUrlProtocol(protocol, linkString) {
+        const url = new URL(linkString);
+        url.protocol = `${protocol}:`;
+        return url.toString();
+      }
+
+      httpsLinkInput.onchange = () => {
+        const httpsLinkString = httpsLinkInput.value;
+        const discordUrl = setUrlProtocol("discord", httpsLinkString);
+        discordAppInput.value = discordUrl;
+      };
+
+      discordAppInput.onchange = () => {
+        const discordLinkString = discordAppInput.value;
+        const httpsUrl = setUrlProtocol("https", discordLinkString);
+        httpsLinkInput.value = httpsUrl;
+      };
+
+      openButton.onclick = () => {
+        window.location.replace(discordAppInput.value);
+      };
+
+      copyHttpsButton.onclick = () => {
+        window.navigator.clipboard.writeText(httpsLinkInput.value);
+      };
+
+      copyDiscordButton.onclick = () => {
+        window.navigator.clipboard.writeText(discordAppInput.value);
+      };
+
+      window.onload = () => {
+        const queryString = window.location.search;
+        const searchParams = new URLSearchParams(queryString);
+        const urlString = searchParams.get("url");
+
+        if (!urlString) {
+          return;
+        }
+
+        const discordUrlString = setUrlProtocol("discord", urlString);
+
+        httpsLinkInput.value = urlString;
+        httpsLinkInput.onchange();
+
+        window.location.replace(discordUrlString);
+      };
+    </script>
+  </body>
+</html>
