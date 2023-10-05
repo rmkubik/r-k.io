@@ -46,6 +46,35 @@
         Itch.io devlogs don't seem to have a spoiler option. If you don't wish
         to see spoilers, do not expand the sections below!
       </p>
+      <h2>Version 3.0.1 - 3/30/23</h2>
+      <p>
+        This spoiler is an image of the completed journal as for this version.
+      </p>
+      <div style="position: relative">
+        <div
+          class="spoiler"
+          style="width: 100%; height: 550px"
+          x-data="{open: false}"
+          x-bind:class="{ revealed: open }"
+          x-on:click="open = !open"
+          role="button"
+          tabindex="0"
+          aria-label="reveal spoiler"
+        >
+          <span
+            style="
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              padding: 1rem;
+              text-align: center;
+            "
+            ><img
+              style="object-fit: contain; max-height: 100%"
+              src="assets/images/island-maker-journal-3.0.1.png"
+          /></span>
+        </div>
+      </div>
       <h2>Version 7 - 3/12/22</h2>
       <ul>
         <li>
